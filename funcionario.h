@@ -1,7 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <ctype.h>
+
 typedef struct funcionario Funcionario;
 
 // Função para registrar um novo funcionário e armazenar suas informações em um arquivo
-void registraFuncionario(Funcionario *funcionario, FILE *arquivo, char *nome, char *cargo, char *documento);
+void registraFuncionario(Funcionario *funcionario, FILE *arquivo, char *nome, char *cargo, int documento);
 
 // Função para contar o número de funcionários do arquivo
 int quantificaFuncionarios(FILE *arquivo);

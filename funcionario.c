@@ -7,7 +7,8 @@
 
 struct funcionario
 {
-    char nome[21], cargo[21], documento[21];
+    char nome[51], cargo[21], 
+    int documento;
 };
 
 void formataString(char nome[21])

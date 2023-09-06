@@ -1,12 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include "funcionario.h"
+#include "funcionario.c"
 
 int main(void)
 {
   int opcao1 = 0, opcao2 = 0, totalFuncionarios = 0, resultado = 0, resultadoString = 0;
-  char nome[21], cargo[21], documento[21];
+  char nome[21], cargo[21]; 
+  int documento;
   Funcionario *funcionario = NULL; 
   FILE *arquivo = NULL; 
 
@@ -44,7 +42,7 @@ int main(void)
             //Laço de reptição para verificar se a string contém caracteres especiais
             do{
                 printf("Informe o Documento: ");
-                scanf(" %20[^\n]", documento);
+                scanf(" %d", documento);
                 //Se resultadoString receber 0 o laço continua até receber a entrada correta
                 resultadoString = verificaString(documento);
             }while (resultadoString == 0);
@@ -115,7 +113,7 @@ int main(void)
                     //Laço de reptição para verificar se a string contém caracteres especiais
                     do{
                         printf("Informe o Documento: ");
-                        scanf(" %20[^\n]", documento);
+                        scanf(" %d", documento);
                         resultadoString = verificaString(documento);
                         //Se resultadoString receber 0 o laço continua até receber a entrada correta
                     }while (resultadoString == 0);
